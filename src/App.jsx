@@ -1,11 +1,12 @@
 import { useContext, useEffect } from "react";
 import "./App.css";
-import ThemeButton from "./components/ThemeButton";
 import UserContext from "./contexts/UserContext";
+import Header from "./components/header/Header";
 
 function App() {
   const { darkMode } = useContext(UserContext);
 
+  // for dark mode toggle
   useEffect(() => {
     const themeMode = darkMode ? "dark" : "light";
     console.log(themeMode);
@@ -13,12 +14,13 @@ function App() {
     document.querySelector("html").classList.add(themeMode);
   }, [darkMode]);
 
-  
   // ===============================================
   return (
-    <>
-      <ThemeButton />
-    </>
+    <div className="bg-slate-800 h-[100vh]">
+      <div className="mx-auto shadow-lg">
+        <Header />
+      </div>
+    </div>
   );
 }
 

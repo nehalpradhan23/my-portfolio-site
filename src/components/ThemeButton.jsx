@@ -11,7 +11,7 @@ function ThemeButton() {
   // =======================================================
   return (
     <div>
-      <button onClick={changeTheme} className="w-[50px] h-[50px] text-[50px] bg-red-600">
+      <button onClick={changeTheme} className="w-[50px] h-[50px] text-[50px] ">
         {darkMode ? <MdDarkMode /> : <CiLight />}
       </button>
     </div>
